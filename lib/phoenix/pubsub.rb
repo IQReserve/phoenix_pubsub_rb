@@ -31,6 +31,25 @@ module Erlang
         end
       end
 
+      module TrueClass
+        def __erlang_type__
+          :atom
+        end
+
+        def __erlang_evolve__
+          :true.__erlang_evolve__
+        end
+      end
+
+      module FalseClass
+        def __erlang_type__
+          :atom
+        end
+
+        def __erlang_evolve__
+          :false.__erlang_evolve__
+        end
+      end
     end
   end
 end
