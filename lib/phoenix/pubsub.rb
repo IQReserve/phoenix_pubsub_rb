@@ -51,6 +51,16 @@ module Erlang
         end
       end
 
+      module NilClass
+        def __erlang_type__
+          :atom
+        end
+
+        def __erlang_evolve__
+          :nil.__erlang_evolve__
+        end
+      end
+
       module ActiveSupport
         module TimeWithZone
           def __erlang_type__
