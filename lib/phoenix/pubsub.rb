@@ -61,6 +61,16 @@ module Erlang
         end
       end
 
+      module Time
+        def __erlang_type__
+          :string
+        end
+
+        def __erlang_evolve__
+          iso8601(6).__erlang_evolve__
+        end
+      end
+
       module ActiveSupport
         module TimeWithZone
           def __erlang_type__
