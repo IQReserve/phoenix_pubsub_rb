@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.add_dependency 'erlang-etf', '1.1.1'
+  s.add_dependency 'erlang-terms', '~> 1.1'
   s.add_dependency 'redis', '~> 3.0'
 
   s.add_development_dependency 'bundler', '~> 1.9'
